@@ -1,0 +1,428 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>工程实践与科技创新 III-C 17 组项目报告</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+.cm-s-inner { padding: 0.5rem 0.2rem; border-radius: 0.25rem; border: 1px solid var(--accent-color)  !important; }
+.cm-s-inner.CodeMirror, .cm-s-inner .CodeMirror-gutters { border: none; background-color: rgb(40, 42, 54) !important; color: rgb(248, 248, 242) !important; }
+.cm-s-inner .CodeMirror-gutters { width: 5ch; color: rgb(109, 138, 136); }
+.cm-s-inner .CodeMirror-cursor { border-left: thin solid rgb(248, 248, 242) !important; }
+.cm-s-inner .CodeMirror-linenumber { color: rgb(109, 138, 136); width: 4ch !important; }
+.cm-s-inner span.cm-comment { color: rgb(98, 114, 164); }
+.cm-s-inner span.cm-string, .cm-s-inner span.cm-string-2 { color: rgb(241, 250, 140); }
+.cm-s-inner span.cm-number { color: rgb(189, 147, 249); }
+.cm-s-inner span.cm-variable, .cm-s-inner span.cm-variable-2 { color: rgb(80, 250, 123); }
+.cm-s-inner span.cm-def { color: white; }
+.cm-s-inner span.cm-operator { color: rgb(255, 121, 198); }
+.cm-s-inner span.cm-keyword { color: rgb(255, 121, 198); }
+.cm-s-inner span.cm-atom { color: rgb(189, 147, 249); }
+.cm-s-inner span.cm-meta { color: rgb(248, 248, 242); }
+.cm-s-inner span.cm-tag { color: rgb(255, 121, 198); }
+.cm-s-inner span.cm-attribute { color: rgb(80, 250, 123); }
+.cm-s-inner span.cm-qualifier { color: rgb(80, 250, 123); }
+.cm-s-inner span.cm-property { color: rgb(102, 217, 239); }
+.cm-s-inner span.cm-builtin { color: rgb(80, 250, 123); }
+.cm-s-inner span.cm-variable-3, .cm-s-inner span.cm-type { color: rgb(255, 184, 108); }
+.md-fences.md-focus .cm-s-inner .CodeMirror-activeline-background { background: rgba(255, 255, 255, 0.1); }
+.cm-s-inner .CodeMirror-matchingbracket { text-decoration: underline; color: white !important; }
+.cm-s-inner .CodeMirror-selected, .cm-s-inner .CodeMirror-selectedtext { color: inherit; text-shadow: none; background: rgb(59, 66, 84) !important; }
+#fences-auto-suggest .active { background: rgb(60, 60, 60); }
+#write .code-tooltip { bottom: initial; top: calc(100% - 1px); background: rgb(40, 42, 54); border-width: 0px 1px 1px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-right-color: rgb(60, 60, 60); border-bottom-color: rgb(60, 60, 60); border-left-color: rgb(60, 60, 60); border-image: initial; border-top-style: initial; border-top-color: initial; }
+.auto-suggest-container { border-color: rgb(91, 91, 91); }
+.auto-suggest-container .autoComplt-hint.active { background: rgb(91, 91, 91); color: rgb(255, 255, 255); }
+:root { --bg-color: #1e2022; --text-color: #ddd; --md-char-color: #5b5b5b; --meta-content-color: #757575; --table-border-color: #5b5b5b; --primary-color: #428bca; --primary-btn-border-color: #285e8e; --primary-btn-text-color: #ddd; --window-border: 1px solid #16161a; --active-file-bg-color: #16161a; --active-file-text-color: inherit; --active-file-border-color: #757575; --active-search-item-bg-color: #212121; --side-bar-bg-color: #2b2b2b; --item-hover-bg-color: #1e2022; --item-hover-text-color: #fff; --search-select-text-color: #ddd; --search-select-bg-color: #428bca90; --rawblock-edit-panel-bd: #3c3c3c; --monospace: "Consolas", monospace; --node-fill: #1e2022; --node-border: #ffffff26; }
+html, body { font-family: "Avenir Next LT Pro", sans-serif; }
+body { font-size: 12pt; }
+h1, h2, h3, h4, h5, h6 { font-family: "Avenir Next LT Pro", sans-serif; line-height: 1.5rem; margin-top: 2rem; }
+p { margin-top: 0.5em; margin-bottom: 0.5em; text-align: justify; }
+a { color: rgb(107, 202, 251); }
+del { color: rgb(91, 91, 91); }
+mark { padding: 2px 1px; background: rgba(25, 97, 134, 0.816); color: inherit; }
+blockquote { position: relative; margin: 1rem 0px 1rem 2rem; font-family: "Avenir Next LT Pro", sans-serif; }
+blockquote::before { content: ""; position: absolute; left: -2rem; height: 100%; width: 0.25rem; background: rgb(66, 139, 202); }
+code, .md-fences, tt { font-family: Consolas, monospace; font-size: 1rem; }
+code { font-size: 0.9em; border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 0.25rem; padding: 0px 0.125rem; background: rgba(0, 0, 0, 0.1); }
+hr { border-color: rgb(91, 91, 91); }
+table { border: 1px solid rgb(91, 91, 91); margin: 1rem 0px; }
+table tr:nth-child(2n) { background: rgb(60, 60, 60); }
+thead { background: rgb(77, 77, 77); }
+td, th { padding: 0.35rem 0.7rem; border: 1px solid rgb(91, 91, 91); }
+#write { position: static; width: 90%; max-width: 700px; line-height: 1.6; transform: none; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: auto; }
+#write h1::before, #write h2::before, #write h3::before, #write h4::before, #write h5::before, #write h6::before { position: absolute; right: calc(100% + 10px); bottom: 0px; color: rgb(91, 91, 91); font-size: 1rem; font-weight: bold; border: 0px; border-radius: 0px; left: auto; float: none; padding: 0px; vertical-align: baseline; line-height: 20px; }
+#write h1 { font-size: 2.4rem; text-align: center; margin-top: 4rem; margin-bottom: 4rem; }
+#write h2 { font-size: 2rem; }
+#write h3 { font-size: 1.6rem; }
+#write h4 { font-size: 1.4rem; }
+#write h5, #write h6 { font-size: 1.2rem; }
+#write ol, #write ul { padding-left: 2rem; margin: 0.5rem 0px; }
+#write ol > li, #write ul > li { color: rgb(66, 139, 202); }
+#write ol > li > *, #write ul > li > * { color: rgb(221, 221, 221); }
+#write ol > li > :not(ol):not(ul), #write ul > li > :not(ol):not(ul) { padding-left: 0.25rem; }
+#write ul { list-style-type: disc; }
+#write .md-task-list-item > input { -webkit-appearance: initial; display: block; position: absolute; border: 1px solid rgb(91, 91, 91); border-radius: 0.25rem; margin-top: 0.1rem; margin-left: -1.8rem; height: 1.2rem; width: 1.2rem; transition: background 0.3s ease 0s; }
+#write .md-task-list-item > input:focus { outline: none; box-shadow: none; }
+#write .md-task-list-item > input:hover { background: rgb(60, 60, 60); }
+#write .md-task-list-item > input[checked]::before { content: ""; position: absolute; top: 20%; left: 50%; height: 60%; width: 2px; transform: rotate(40deg); background: rgb(221, 221, 221); }
+#write .md-task-list-item > input[checked]::after { content: ""; position: absolute; top: 46%; left: 25%; height: 30%; width: 2px; transform: rotate(-40deg); background: rgb(221, 221, 221); }
+#write .md-task-list-item > p { transition: color 0.3s ease 0s; }
+#write .md-task-list-item.task-list-done > p { color: rgb(91, 91, 91); text-decoration: line-through; }
+#write .md-meta-block { background-color: transparent; border-bottom: 1px solid rgb(91, 91, 91); padding-bottom: 1rem; opacity: 0.8; }
+#write .md-table-edit { border-top: 1px solid rgb(91, 91, 91); padding: 3px 0px; margin-top: -29px !important; }
+#write .md-grid-board a.md-active, #write .md-grid-board a:hover { background: rgb(66, 139, 202); color: rgb(91, 91, 91); }
+#write .md-grid-board tr[row="1"] a.md-active, #write .md-grid-board tr[row="1"] a:hover { background: rgb(40, 94, 142); color: rgb(91, 91, 91); }
+#write .btn-group .btn + .btn { margin-left: 0px; }
+#write .btn-default.active, #write .btn-default.focus, #write .btn-default:active, #write .btn-default:focus, #write .btn-default:hover, .open > #write .btn-default.dropdown-toggle { background: transparent; color: inherit; }
+#write .typora-table-drag-area::after { content: ""; position: absolute; border: 2px solid rgb(221, 221, 221); opacity: 0; transition: opacity 0.4s ease 0s; }
+#typora-table-row-tracker #write .typora-table-drag-area::after, #typora-table-col-tracker #write .typora-table-drag-area::after { opacity: 1; }
+#typora-table-row-tracker #write .typora-table-drag-area::after { top: 0px; left: 50%; transform: translateX(-50%); width: 0px; height: 100%; }
+#typora-table-col-tracker #write .typora-table-drag-area::after { top: 50%; left: 0px; transform: translateY(-50%); width: 100%; height: 0px; }
+#write .md-toc-tooltip { z-index: 10; }
+#write .md-toc-item { font-size: 1rem; color: var(--primary-btn-border-color); }
+#write .md-toc-h1 { font-family: "Avenir Next LT Pro", sans-serif; font-size: 1rem; }
+#write .md-toc-h2 { font-size: 1rem; }
+#write .md-footnote { font-family: "Avenir Next LT Pro", sans-serif; font-size: 1rem; border: 1px solid rgb(60, 60, 60); padding: 0px 4px; background: rgb(17, 17, 17); color: rgb(221, 221, 221); }
+#write .md-def-split { min-width: 1ch; }
+#write .md-def-name::before, #write .md-def-name::after { color: rgb(117, 117, 117); }
+#write .md-image > .md-meta { color: rgb(117, 117, 117); }
+#write .md-rawblock-tooltip { top: -1.5rem; height: 1.5rem; padding: 0.25rem; }
+#write .md-search-hit { background: rgba(66, 139, 202, 0.25); border-radius: 0.125rem; }
+#write .md-search-select { background: rgba(66, 139, 202, 0.565); border: 1px solid rgba(146, 146, 146, 0.56); padding: 0px 1px; }
+#write pre[lang="mermaid"] .md-diagram-panel { border-color: rgba(255, 255, 255, 0.15); }
+#write pre[lang="mermaid"] tspan { fill: rgb(221, 221, 221); }
+#write pre[lang="mermaid"][mermaid-type="graph"] path.path { marker-end: url("#arrowhead"); }
+#write pre[lang="mermaid"][mermaid-type="gantt"] .section1 { fill: transparent; }
+#write pre[lang="mermaid"][mermaid-type="gantt"] .section2 { fill: rgb(60, 60, 60); }
+#write pre[lang="mermaid"][mermaid-type="gantt"] .section3 { fill: transparent; }
+#write pre[lang="mermaid"][mermaid-type="gantt"] .section4 { fill: rgb(60, 60, 60); }
+#write pre[lang="mermaid"][mermaid-type="gantt"] .section5 { fill: transparent; }
+#write pre[lang="mermaid"][mermaid-type="gantt"] .section6 { fill: rgb(60, 60, 60); }
+#write pre[lang="mermaid"][mermaid-type="gantt"] .section7 { fill: transparent; }
+#write pre[lang="mermaid"][mermaid-type="gantt"] .section8 { fill: rgb(60, 60, 60); }
+#write pre[lang="mermaid"][mermaid-type="gantt"] .section9 { fill: transparent; }
+#write pre[lang="mermaid"][mermaid-type="gantt"] .section10 { fill: rgb(60, 60, 60); }
+#write pre[lang="mermaid"][mermaid-type="gantt"] .section11 { fill: transparent; }
+#write pre[lang="mermaid"][mermaid-type="gantt"] .section12 { fill: rgb(60, 60, 60); }
+#write pre[lang="mermaid"][mermaid-type="gantt"] .section13 { fill: transparent; }
+#write pre[lang="mermaid"][mermaid-type="gantt"] .section14 { fill: rgb(60, 60, 60); }
+#write pre[lang="mermaid"][mermaid-type="gantt"] .section15 { fill: transparent; }
+#write pre[lang="mermaid"][mermaid-type="gantt"] .section16 { fill: rgb(60, 60, 60); }
+#write pre[lang="mermaid"][mermaid-type="gantt"] .section17 { fill: transparent; }
+#write pre[lang="mermaid"][mermaid-type="gantt"] .section18 { fill: rgb(60, 60, 60); }
+#write pre[lang="mermaid"][mermaid-type="gantt"] .section19 { fill: transparent; }
+#write pre[lang="mermaid"][mermaid-type="gantt"] .task { fill: rgb(138, 136, 201); stroke: rgb(95, 92, 175); }
+#write pre[lang="mermaid"][mermaid-type="gantt"] .task[class*="done"] { fill: rgb(107, 107, 107); stroke: rgb(61, 61, 61); }
+#write pre[lang="mermaid"][mermaid-type="gantt"] .task[class*="active"] { fill: rgb(115, 124, 255); stroke: rgb(65, 61, 160); }
+#write pre[lang="mermaid"][mermaid-type="gantt"] .task[class*="crit"] { fill: rgb(214, 105, 121); stroke: rgb(143, 29, 34); }
+#write pre[lang="mermaid"][mermaid-type="gantt"] .task[class*="Crit"] { stroke: rgb(143, 29, 34); }
+#write pre[lang="mermaid"][mermaid-type="gantt"] text { fill: rgb(221, 221, 221); }
+#write pre[lang="mermaid"][mermaid-type="gantt"] text[class*="activeText"], #write pre[lang="mermaid"][mermaid-type="gantt"] text[class*="activeCritText"] { font-weight: bold; fill: rgb(221, 221, 221) !important; }
+#write pre[lang="mermaid"][mermaid-type="gantt"] text[class*="doneText"], #write pre[lang="mermaid"][mermaid-type="gantt"] text[class*="doneCritText"] { fill: rgb(91, 91, 91) !important; }
+#write pre[lang="mermaid"][mermaid-type="gantt"] .grid .tick line { stroke: rgb(221, 221, 221); }
+.modal-content .modal-header, .modal-content .modal-footer { border-color: rgb(91, 91, 91); }
+.modal-content input, .modal-content button.btn-default { border-color: rgb(91, 91, 91); }
+.modal-content input { background: transparent; }
+#typora-quick-open { top: 32px; width: 40%; min-width: 420px; transform: translateX(-50%); margin-left: 0px; }
+.mac-seamless-mode #typora-quick-open { top: 50px; }
+#typora-quick-open #typora-quick-open-input input { border-color: rgb(66, 139, 202); }
+#typora-quick-open .ty-quick-open-category-title { height: auto; padding-top: 4px; padding-left: 12px; }
+#typora-quick-open .typora-quick-open-item { display: flex; flex-direction: column; justify-content: center; cursor: pointer; }
+#typora-quick-open .typora-quick-open-item:not(.active):hover { background: rgb(33, 33, 33); }
+#typora-quick-open .typora-quick-open-item-path { margin-top: -2px; }
+.ty-tooltip { background: rgb(43, 43, 43); color: rgb(221, 221, 221); border-color: rgba(0, 0, 0, 0.25); }
+.code-tooltip.md-f-tooltip, .code-tooltip.md-f-tooltip .md-arrow::after { background: rgb(17, 17, 17) !important; color: rgb(221, 221, 221) !important; }
+.code-tooltip.md-f-tooltip a { color: rgb(107, 202, 251); }
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container), .on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) *, .on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) ol, .on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) ul { color: rgb(91, 91, 91) !important; }
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) img, .on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) .md-footnote, .on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) .md-emoji { opacity: 0.5; }
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) mark { background: rgb(60, 60, 60); }
+.on-focus-mode blockquote .md-end-block:not(.md-focus):not(.md-focus-container)::before { opacity: 0.5; }
+.on-focus-mode li:not(.md-focus-container)::before { opacity: 0.5; }
+#typora-sidebar { border-right: 1px solid rgb(25, 25, 28); }
+#typora-sidebar .sidebar-tabs { font-family: Adelle, "Times New Roman", serif; border-bottom: 1px solid rgb(25, 25, 28); }
+#typora-sidebar .file-list-item-file-name { font-family: Adelle, "Times New Roman", serif; font-size: 1.2em; }
+#typora-sidebar #file-library-search-input { background: rgb(43, 43, 43); }
+#typora-sidebar #file-library-search .file-list-item-file-name { font-size: 1.1rem; }
+#typora-sidebar #file-library-search .ty-search-item.active { background: rgb(33, 33, 33); }
+#typora-sidebar .file-list-item-summary, #typora-sidebar .ty-search-item-line { font-family: "Avenir Next LT Pro", Lato, sans-serif; }
+#typora-sidebar .ty-file-search-match-text, #typora-sidebar .ty-outline-hit { font-weight: bold; background: transparent; }
+#typora-sidebar #outline-content { line-height: 1.4em; }
+#typora-sidebar #outline-content .outline-h1 > .outline-item { font-family: Adelle, "Times New Roman", serif; }
+#typora-sidebar .outline-title-wrapper, #typora-sidebar .outline-item-wrapper.outline-h1 > .outline-item { font-family: Adelle, "Times New Roman", serif; }
+#typora-sidebar .file-library-node, #typora-sidebar .file-library-node .file-node-background { transition: background 0.4s ease 0s; }
+#typora-sidebar .file-tree-node.file-library-file-node:not(.active):hover .file-node-background, #typora-sidebar .file-list-item.file-library-node:not(.active):hover { background: rgb(30, 32, 34); }
+#typora-sidebar .file-tree-node.file-library-file-node.active .file-node-background, #typora-sidebar .file-list-item.file-library-file-node.active { border-left: 5px solid rgb(66, 139, 202); }
+#typora-sidebar .blink-area { animation: 0s ease 0s 1 normal none running none; }
+#typora-sidebar #ty-sidebar-footer { border-top: 1px solid rgb(25, 25, 28); }
+#typora-sidebar #ty-sidebar-footer .sidebar-footer-item { transition: background 0.3s ease 0s; }
+.dropdown-menu .active a, .dropdown-menu .has-extra-menu.active a, .dropdown-menu .has-btn-submenu .menu-style-btn.active, #footer-word-count-info .ty-footer-word-count-all tr:hover, #ty-spell-check-dict-missing-menu li:hover, .ty-spell-check-panel-item.ty-active, .ty-spell-check-panel-item:hover, .footer-item:hover { background: rgb(221, 221, 221) !important; color: rgb(43, 43, 43) !important; }
+.btn-default:hover { background: rgb(60, 60, 60); }
+footer.ty-footer { border-top: 0px; }
+#outline-btn:hover { color: inherit; }
+.form-control:focus { border-color: rgb(66, 139, 202); box-shadow: rgba(0, 0, 0, 0.075) 0px 1px 1px inset, rgb(66, 139, 202) 0px 0px 2px; }
+.megamenu-opened header { background-image: none; }
+#top-titlebar, #top-titlebar * { color: inherit; }
+#megamenu-content { padding-top: 28px; background: rgb(43, 43, 43); color: rgb(221, 221, 221); }
+#megamenu-content .long-btn { border-color: rgba(146, 146, 146, 0.56); transition: border-color 0.4s ease 0s; }
+#megamenu-content .long-btn:hover { border-color: rgb(66, 139, 202); background: rgb(30, 32, 34); color: rgb(255, 255, 255) !important; }
+#megamenu-menu-panel:not(:first-of-type) { margin-top: 48px; }
+#recent-file-panel-action-btn { background: inherit; border-color: rgba(146, 146, 146, 0.56); transition: all 0.4s ease 0s; }
+#recent-file-panel-action-btn:hover { border-color: rgb(66, 139, 202); background: rgb(30, 32, 34); color: rgb(255, 255, 255); }
+#recent-document-table { background-color: inherit; }
+#recent-file-panel tbody tr:nth-child(2n-1) { background-color: inherit; }
+#recent-file-panel tbody tr:hover { background-color: rgb(30, 32, 34) !important; }
+#recent-file-panel tbody tr:hover td:nth-child(1) { color: rgb(255, 255, 255); }
+#megamenu-menu-sidebar { background-color: rgb(30, 32, 34); color: rgb(221, 221, 221); }
+.megamenu-menu-header, .megamenu-menu-list li:not(.saved) a { transition: all 0.4s ease 0s; }
+.megamenu-menu-header { border-bottom: 1px solid rgb(22, 22, 26); }
+.megamenu-menu-header:hover { background: rgb(22, 24, 25); }
+.megamenu-menu-list li:not(.saved) a:not(.active):hover, .megamenu-menu-list li a.active { background: rgb(16, 16, 16) !important; }
+#m-saved { background: inherit; color: inherit; }
+#megamenu-menu-list { margin: 0px; }
+.theme-preview-div { transition: all 0.4s ease 0s; }
+.theme-preview-div:hover { border: 4px solid rgb(40, 94, 142); }
+.theme-preview-div.active, .theme-preview-div.active:hover { border: 4px solid rgb(66, 139, 202); }
+.theme-preview-div.active i { color: rgb(66, 139, 202); }
+.ty-preferences .window { background: rgb(43, 43, 43); }
+.ty-preferences .nav-group-item { background: transparent; color: rgb(221, 221, 221); cursor: pointer; }
+.ty-preferences .nav-group-item:hover { background: rgb(30, 32, 34); color: inherit; }
+.ty-preferences .nav-group-item:active, .ty-preferences .nav-group-item.active { background: rgb(24, 24, 24); color: inherit; }
+.ty-preferences .btn-default { background: transparent; color: inherit; border-color: rgba(146, 146, 146, 0.56); cursor: pointer; }
+.ty-preferences .btn-default:hover { border-color: rgb(66, 139, 202); background: rgb(30, 32, 34); color: rgb(255, 255, 255); }
+.ty-preferences .btn-default:active, .ty-preferences .btn-default.active { background: rgb(24, 24, 24); }
+.ty-preferences select, .ty-preferences ul.dropdown-menu { border-color: rgba(146, 146, 146, 0.56); background: rgb(43, 43, 43); }
+.ty-preferences ul.dropdown-menu li { background: rgb(43, 43, 43); }
+.ty-preferences ul.dropdown-menu li:hover { background: rgb(30, 32, 34); }
+.cm-s-typora-default .cm-s-inner.CodeMirror-line { border: 0px !important; }
+#write > p:first-child:empty { position: static; }
+#write > p:first-child:not(:only-child)::before, #write > p:only-child::before { content: ""; display: block; position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; background: url("ursine/night.png") 45% 90% / cover no-repeat transparent; opacity: 0; }
+#write > p:only-child:empty::before { opacity: 1; }
+@media print {
+  #write ol > li, #write ul > li { color: rgb(221, 221, 221); }
+}
+
+ .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><h1><a name="工程实践与科技创新-iii-c-17-组项目报告" class="md-header-anchor"></a><span>工程实践与科技创新 III-C 17 组项目报告</span></h1><h2><a name="目录" class="md-header-anchor"></a><span>目录</span></h2><div class='md-toc' mdtype='toc'><p class="md-toc-content"><span class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#工程实践与科技创新-iii-c-17-组项目报告">工程实践与科技创新 III-C 17 组项目报告</a></span><span class="md-toc-item md-toc-h2" data-ref="n2"><a class="md-toc-inner" href="#目录">目录</a></span><span class="md-toc-item md-toc-h2" data-ref="n4"><a class="md-toc-inner" href="#项目信息">项目信息</a></span><span class="md-toc-item md-toc-h3" data-ref="n5"><a class="md-toc-inner" href="#项目名称">项目名称</a></span><span class="md-toc-item md-toc-h3" data-ref="n7"><a class="md-toc-inner" href="#成员及分工">成员及分工</a></span><span class="md-toc-item md-toc-h3" data-ref="n27"><a class="md-toc-inner" href="#作品照片">作品照片</a></span><span class="md-toc-item md-toc-h2" data-ref="n30"><a class="md-toc-inner" href="#项目介绍">项目介绍</a></span><span class="md-toc-item md-toc-h3" data-ref="n31"><a class="md-toc-inner" href="#整体结构">整体结构</a></span><span class="md-toc-item md-toc-h3" data-ref="n33"><a class="md-toc-inner" href="#硬件部分">硬件部分</a></span><span class="md-toc-item md-toc-h4" data-ref="n34"><a class="md-toc-inner" href="#模块连接">模块连接</a></span><span class="md-toc-item md-toc-h4" data-ref="n37"><a class="md-toc-inner" href="#小车控制">小车控制</a></span><span class="md-toc-item md-toc-h3" data-ref="n50"><a class="md-toc-inner" href="#软件部分">软件部分</a></span><span class="md-toc-item md-toc-h4" data-ref="n51"><a class="md-toc-inner" href="#用户界面">用户界面</a></span><span class="md-toc-item md-toc-h4" data-ref="n55"><a class="md-toc-inner" href="#控制方式">控制方式</a></span><span class="md-toc-item md-toc-h5" data-ref="n56"><a class="md-toc-inner" href="#方向键控制">方向键控制</a></span><span class="md-toc-item md-toc-h5" data-ref="n59"><a class="md-toc-inner" href="#重力感应">重力感应</a></span><span class="md-toc-item md-toc-h5" data-ref="n62"><a class="md-toc-inner" href="#手柄控制">手柄控制</a></span><span class="md-toc-item md-toc-h5" data-ref="n65"><a class="md-toc-inner" href="#手势控制">手势控制</a></span><span class="md-toc-item md-toc-h5" data-ref="n68"><a class="md-toc-inner" href="#语音控制">语音控制</a></span><span class="md-toc-item md-toc-h4" data-ref="n71"><a class="md-toc-inner" href="#网络通信">网络通信</a></span><span class="md-toc-item md-toc-h4" data-ref="n75"><a class="md-toc-inner" href="#蓝牙通信">蓝牙通信</a></span><span class="md-toc-item md-toc-h4" data-ref="n77"><a class="md-toc-inner" href="#图像处理">图像处理</a></span><span class="md-toc-item md-toc-h2" data-ref="n80"><a class="md-toc-inner" href="#运行结果">运行结果</a></span><span class="md-toc-item md-toc-h3" data-ref="n81"><a class="md-toc-inner" href="#演示">演示</a></span><span class="md-toc-item md-toc-h3" data-ref="n84"><a class="md-toc-inner" href="#测试情况">测试情况</a></span><span class="md-toc-item md-toc-h2" data-ref="n92"><a class="md-toc-inner" href="#总结">总结</a></span><span class="md-toc-item md-toc-h3" data-ref="n93"><a class="md-toc-inner" href="#优点与不足">优点与不足</a></span><span class="md-toc-item md-toc-h3" data-ref="n108"><a class="md-toc-inner" href="#个人感受">个人感受</a></span><span class="md-toc-item md-toc-h2" data-ref="n113"><a class="md-toc-inner" href="#附录">附录</a></span><span class="md-toc-item md-toc-h3" data-ref="n114"><a class="md-toc-inner" href="#系统使用说明">系统使用说明</a></span><span class="md-toc-item md-toc-h3" data-ref="n128"><a class="md-toc-inner" href="#源代码">源代码</a></span><span class="md-toc-item md-toc-h3" data-ref="n130"><a class="md-toc-inner" href="#系统电路图">系统电路图</a></span><span class="md-toc-item md-toc-h3" data-ref="n132"><a class="md-toc-inner" href="#参考资料">参考资料</a></span></p></div><h2><a name="项目信息" class="md-header-anchor"></a><span>项目信息</span></h2><h3><a name="项目名称" class="md-header-anchor"></a><span>项目名称</span></h3><p><span>基于手机的智能车系统</span></p><h3><a name="成员及分工" class="md-header-anchor"></a><span>成员及分工</span></h3><figure><table><thead><tr><th><span>姓名</span></th><th><span>分工</span></th></tr></thead><tbody><tr><td><span>王梓涵</span></td><td><span>车载端界面、网络通讯、图像回传</span></td></tr><tr><td><span>杜蔻年华</span></td><td><span>小车控制、硬件调试、蓝牙通讯</span></td></tr><tr><td><span>张博文</span></td><td><span>遥控端控制方式（方向键、手势、重力感应）</span></td></tr><tr><td><span>李岩松</span></td><td><span>遥控端控制方式（手势、语音）</span></td></tr></tbody></table></figure><p><span>以下为小组成员合照：</span></p><p><img src='image/members.jpg' alt='' referrerPolicy='no-referrer' /></p><p><span>左前-张博文，右前-杜蔻年华，左后-李岩松、右后-王梓涵</span></p><h3><a name="作品照片" class="md-header-anchor"></a><span>作品照片</span></h3><p><img src='image/car1.jpg' width=400 alt='' referrerPolicy='no-referrer' /></p><p><img src='image/car2.jpg' width=400 alt='' referrerPolicy='no-referrer' /></p><h2><a name="项目介绍" class="md-header-anchor"></a><span>项目介绍</span></h2><h3><a name="整体结构" class="md-header-anchor"></a><span>整体结构</span></h3><p><span>本项目由两部手机，一辆小车组成，一部手机为手持遥控端，另一台手机为车载端。遥控端通过各种操控方式向车载端发出控制指令，车载端通过蓝牙将指令转发到小车上，小车解码指令，控制电机转速以响应。车载端还可将其捕获的图像实时回传到遥控端上。</span></p><h3><a name="硬件部分" class="md-header-anchor"></a><span>硬件部分</span></h3><h4><a name="模块连接" class="md-header-anchor"></a><span>模块连接</span></h4><p><span>硬件系统包括三轮驱动、单片机 MSP430G2553、HC06 蓝牙模块、电池组等，单片机接口示意图如下图所示。系统供电情况：单片机供电电压为 3.3V，电机驱动供电电压为 5V，蓝牙模块可选择由单片机或电池直接供电，各模块之间共地。蓝牙组装时蓝牙模块 TXD 连接单片机 RXD 端，蓝牙模块 RXD 连接单片机 TXD 端。每一组电机通过两个针脚写入正转/反转速。</span></p><p><img src='image/energia.png' alt='' referrerPolicy='no-referrer' /></p><h4><a name="小车控制" class="md-header-anchor"></a><span>小车控制</span></h4><p><span>小车控制端代码开发环境为 Energia 1.8.7E21。小车可接受指令：“L”（左转）、“R”（右转）、“A”（前进）、“B”（后退）、“P”（停止）。代码关键部分解释如下：</span></p><ol start='' ><li><p><span>引脚定义，转速定义（注意不同电机之间的不平衡）；</span></p></li><li><p><code>setup()</code><span> 定义：</span><code>Serial.begin(9600)</code><span>，定义管脚为输出模式，初始化为低电平；</span></p></li><li><p><code>loop()</code><span>：代码主体，循环执行。通过 </span><code>Serial.read()</code><span> 捕捉蓝牙信息，根据内容调用相应动作函数。部分代码如下图，注意调试成功后需要删除 </span><code>Serial.println()</code><span> ，以防止蓝牙信息通讯一来一回导致延迟。</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="c++"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="c++"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 7px; left: 6.79861px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">incomingByte</span> <span class="cm-operator">=</span> <span class="cm-variable">Serial</span>.<span class="cm-variable">read</span>();</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">if</span> (<span class="cm-variable">incomingByte</span> <span class="cm-operator">==</span> <span class="cm-string">'L'</span>) {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment">// Serial.println("TURN LEFT");</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">turnLeft</span>();</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">Serial</span>.<span class="cm-variable">read</span>();</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">} ...</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 133px;"></div><div class="CodeMirror-gutters" style="display: none; height: 133px;"></div></div></div></pre></li><li><p><span>相应动作函数：其中 </span><code>stopBack()</code><span> 向所有电机后退的针脚写低电平值，通过向不同电机对应的针脚写入不同转速控制小车直行、左转及进行其他动作。</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="c++"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="c++"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 7px; left: 6.79861px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-3">void</span> <span class="cm-def">stopBack</span>();</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-3">void</span> <span class="cm-def">turnLeft</span>();</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-3">void</span> <span class="cm-def">turnRight</span>();</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-3">void</span> <span class="cm-def">goAhead</span>();</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-3">void</span> <span class="cm-def">park</span>();</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-3">void</span> <span class="cm-def">goBack</span>();</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 133px;"></div><div class="CodeMirror-gutters" style="display: none; height: 133px;"></div></div></div></pre></li></ol><h3><a name="软件部分" class="md-header-anchor"></a><span>软件部分</span></h3><h4><a name="用户界面" class="md-header-anchor"></a><span>用户界面</span></h4><p><span>遥控端和车载端有各自的界面。遥控段主界面提供了 IP 地址的输入框、连接按钮，以及五种控制方式的按钮。车载端以当前捕获的画面作为背景，界面元素主要放置在左下角。第一行显示了最新的行驶命令以及是否使用自动驾驶的开关，第二行是网络和蓝牙的连接按钮，以及通过车载端让小车停下的应急按钮。剩余三行分别显示了该设备的 IP 地址及当前的网络连接状况。</span></p><p><img src='image/mounted_ui.jpg' alt='' referrerPolicy='no-referrer' /></p><p><img src='image/remote_ui.jpg' width=250 alt='' referrerPolicy='no-referrer' /></p><h4><a name="控制方式" class="md-header-anchor"></a><span>控制方式</span></h4><h5><a name="方向键控制" class="md-header-anchor"></a><span>方向键控制</span></h5><p><span>在布局中创建五个按钮对象，分别对应着前进，后退，左转，右转，停止。在 Activity 中为每个按钮设置 </span><code>onClick</code><span> 的响应函数。在按钮按下时给小车发送按钮对应的指令。</span></p><p><img src='image/button.jpg' width=250 alt='' referrerPolicy='no-referrer' /></p><h5><a name="重力感应" class="md-header-anchor"></a><span>重力感应</span></h5><p><span>首先从系统服务中获取加速度传感器。以手机短边为 x 轴，长边为 y 轴，z 轴竖直向下。由于手机受到重力加速度，所以当手机平放的时候，只有 z 方向有加速度分量，当手机左右倾斜的时候，x 方向和 z 方向有加速度分量，当手机前后倾斜的时候，y 方向和 z 方向有加速度分量。按照这个规律，就可以通过手机的倾斜，去改变系统服务中加速度传感器各分量的值，从而控制小车的前进。方向确定的临界加速度值可以调整。</span></p><p><img src='image/gravity.jpg' width=250 alt='' referrerPolicy='no-referrer' /></p><h5><a name="手柄控制" class="md-header-anchor"></a><span>手柄控制</span></h5><p><span>借助 </span><code>com.jmedeisis.bugstick.Joystick</code><span> 库，我们可以创建一个可供拖动的手柄，可以创造出平时玩手机游戏操控汽车的感觉。我们 </span><code>Joystick</code><span> 对象重写一个 </span><code>onDrag()</code><span> 函数，在其中检测手柄被拖动的方向，根据给出的方向，去控制小车行驶的方向，获取方向的具体的临界角度值可以自行调整。</span></p><p><img src='image/joystick.jpg' width=250 alt='' referrerPolicy='no-referrer' /></p><h5><a name="手势控制" class="md-header-anchor"></a><span>手势控制</span></h5><p><span>通过调用安卓 SDK 中的 </span><code>GestureDetector</code><span> 库，利用 </span><code>MotionEvent</code><span> 中 </span><code>getX</code><span> 和 </span><code>getY</code><span> 函数，检测触摸到屏幕和离开屏幕的相对位置来判断手势滑动方向以及距离来判断并发送相应的行进指令。并设置当滑动距离较小（</span><code>Flip_Distance</code><span> 的下限设置为 300）时，判为停止。</span></p><p><img src='image/gesture.jpg' width=250 alt='' referrerPolicy='no-referrer' /></p><h5><a name="语音控制" class="md-header-anchor"></a><span>语音控制</span></h5><p><span>通过使用讯飞语音库识别讲话内容并利用 </span><code>parseVoice</code><span> 函数解析语音内容——前进、后退、左转、右转、停止，对小车发送相应指令。</span></p><p><img src='image/voice.jpg' width=250 alt='' referrerPolicy='no-referrer' /></p><h4><a name="网络通信" class="md-header-anchor"></a><span>网络通信</span></h4><p><span>双机之间的网络通信通过套接字来完成，只要遥控端和车载端连接到同一个 WLAN 上，即可通过套接字收发信息。在本系统中需要使用网络通信的有两个功能：指令收发和图像回传。其中指令是遥控段发送、车载端接受，而图像是车载端发送、遥控端接受。之所以指令要通过车载端转发，是因为原本设计中车载端可以实现自动驾驶，即车载端本身也需要发送指令。在本系统中，这两种数据是通过不同的端口传输的，端口号事先规定并作为常量写入到程序中，且规定接收方为主机、发送方为客机。在连接时只要发送方输入接收方的 IP 地址即可完成连接。</span></p><p><span>指令以字符的形式传输，指令发送程序实现生产者-消费者模型，其需要维护一个字符串队列以及一个守护线程。当遥控段通过某种方式发出控制指令时，指令字符串会先加入到队列中，若队列已满则丢弃。守护线程首先尝试连接车载端，若连接成功则持续从队列中取出指令发送，若连接失败或发送过程中出现异常则在一定延时后重新尝试连接。接收程序建立主机端口，不断尝试读取字符串，在接收到一个字符串后调用回调函数来完成转发，这样实现了网络通信和蓝牙通信的分离。</span></p><p><span>图像的传输和字符串整体流程类似。不同之处在于：图像队列中永远保存最近的帧，即加入新的图像时，如果队列已满，则将较早的帧先出队。图像在传输前进行压缩，并且将其长度编码成一个八字节长度的字符串作为头，先发送头再发送剩余图像。这样可以通过一次套接字连接传输连续多帧图像，且图像的体积也较小，提高了图像回传的效率。</span></p><h4><a name="蓝牙通信" class="md-header-anchor"></a><span>蓝牙通信</span></h4><p><span>蓝牙的连接需要用户指定目标设备，所以需要一个界面供用户选择。在得到设备信息后，获取该设备的蓝牙套接字进行通信，其余步骤和网络套接字通信类似。由于蓝牙通信是在确保正确连接的基础上进行的，所以不需要实现生产者-消费者模型。蓝牙的发送通过提供给消息接收程序的回调函数实现，通过网络收到消息后立刻转发给蓝牙设备。</span></p><h4><a name="图像处理" class="md-header-anchor"></a><span>图像处理</span></h4><p><span>在完成基本功能之余，我们尝试了在车载端进行图像处理来实现自动驾驶。将小车放于黑线上，使其自行跟踪黑线并前进或转向。图像处理功能基于 OpenCV 的 Android 平台版本开发。在捕获一帧图像后，传送给自动驾驶程序。先对图像进行压缩，进行直方图均衡化以降低光照的影响。然后裁剪出感兴趣区，一般是图像中部靠下的一块区域，是车载端可见的路径部分。之后对图像进行二值化，将路径和非路径部分区分出来。将图像横向三等分，分别对三个区域计算掩膜部分占该区域面积之比，根据三个比例值的绝对大小和相对大小来决定小车方向。如果某一区域比值最小（路径面积占比最大）且绝对大小较小，则向该方向行驶；如果所有比值均较大，说明丢失目标，会尝试左转以寻找路径。</span></p><p><span>由于各种原因，我们并未来得及充分调试该功能，特别是调整其中的一些参数。目前在开启自动驾驶模式后，小车尚未能走完预定的线路，所以在验收中未能呈现出来。</span></p><h2><a name="运行结果" class="md-header-anchor"></a><span>运行结果</span></h2><h3><a name="演示" class="md-header-anchor"></a><span>演示</span></h3><video src="video/demo.mp4" controls="controls" onerror="this.style.display = 'none';"></video><p>&nbsp;</p><h3><a name="测试情况" class="md-header-anchor"></a><span>测试情况</span></h3><ul><li><span>五种控制模式（方向键、手势、重力感应、手势、语音）均能正常工作</span></li><li><span>小车能及时响应控制指令，运行流畅</span></li><li><span>图像回传速率高</span></li></ul><h2><a name="总结" class="md-header-anchor"></a><span>总结</span></h2><h3><a name="优点与不足" class="md-header-anchor"></a><span>优点与不足</span></h3><p><span>本项目具有以下优点：</span></p><ul><li><span>系统运行稳定、流畅，响应及时；</span></li><li><span>控制方式多样；</span></li><li><span>软件结构设计合理，高度模块化，易于维护和扩展。</span></li></ul><p><span>本项目尚有以下可改进的方面：</span></p><ul><li><span>用户界面的布局可以更加规范一些；</span></li><li><span>已开发的自动寻路功能尚无法投入实际使用，需要结合小车的运行状况进行进一步调试。</span></li></ul><h3><a name="个人感受" class="md-header-anchor"></a><span>个人感受</span></h3><p><strong><span>王梓涵</span></strong><span>  本次工科创的实践经历对我而言是有不少收获的。我负责的主要是网络和图像部分的功能。网络部分需要用到一些操作系统上学到的知识，比如套接字、多线程、生产者-消费者模型等，引导我利用专业知识解决现实问题。此次开发手机应用部分，我尝试了使用 Kotlin 这一更现代的编程语言，它不仅可以和现有的 Java 代码无缝交互，而且在各种方面都比 Java 更简洁和安全，这使我感受到了编程语言设计的改进对于软件开发的意义。由于软件需要分工开发，所以对软件模块化提出了要求。在编写程序的过程中，需要考虑如何尽可能把功能封装起来，以便和组员的程序整合，而不仅仅是在主活动里把功能做出来。略有遗憾的一点是，由于我们组在解决各种硬件问题上花了太多时间，我准备开发的自动驾驶功能只写出了程序，却来不及调试使其正常运行。我觉得主要是我们对硬件的了解不足，并且也缺乏和其它组的交流，导致了排查故障比较盲目、没有明确的思路，这也算是一点启示吧。最后还是感谢组员们的付出，你们每个人都对这个项目的完成作出了重要的贡献，希望你们不要介意我在这段时间里频繁地催锅。=￣ω￣=</span></p><p><strong><span>杜蔻年华</span></strong><span>  本次工科创中，我主要负责硬件，小车代码和蓝牙通讯部分。工作中碰到了一系列问题。本次我们组领取的小车零件非常分散，小车支架也不完整，刚开始组装小车时，由于五转三模块的故障，系统供电一直有问题，后来通过直接引入电池 3V 正级线解决给单片机供电，舍弃了五转三模块；而后在使用单片机时，偶尔会出现经过一段时间使用后小车无法响应/接受指令的问题，系充电电池老化导致单片机供电不足所致，需要将 3V 电级线再增加一节电池解决，后来为了稳定供电，我们购买了非可充电电池；另一个困扰了很久的问题是蓝牙接受指令，小车响应指令时经常出现延迟，尤其在重力感应模块下，后来发现是因为在编写小车控制端代码时，为了调试方便，蓝牙每收到指令，还会返回一段信息提示收到的指令，而重力感应模块在设计时有大量指令输出，蓝牙频繁输入输出将导致延迟，故在调试成功后，需将小车控制中蓝牙输出反馈删掉，避免延迟。本次工科创中，碰到了一些之前没有预料过的问题，提高了分析解决问题的能力，电路的反复连接/排错也让我对单片机和系统电路有了更深刻的了解。此外，特别需要感谢队友们花大量时间共同调试，一起解决问题。</span></p><p><strong><span>张博文</span></strong><span>  在本次工科创课程，我第一次尝试用 Android Studio 进行手机 App 的开发，了解到了自己每天都在使用的手机 App 最基本的开发流程。而我在平时经常会有一些突发奇想，想要自己开发一些 App 满足自己平时的一些需求，而这次经历，给我提供了一个非常好的铺垫，打下了基础。另外，这个课程十分考验同伴之间的协作能力。在开发一个软件的时候，多个人的代码存在着一些不兼容的地方，都需要协调沟通，培养了我在编程实践中的团队协作能力。最后在调试的过程也碰到了许多麻烦，在解决这些困难的时候也培养了解决问题的能力。</span></p><p><strong><span>李岩松</span></strong><span>  在这次工科创课程中，我负责的是手机端语音识别和手势识别功能的实现以及小车的部分调试工作。经过一系列学习，完成安卓环境的搭建和应用App的编写。让我感触最深的是安卓环境下各种库的强大，这一点语音识别模块体现的尤为明显，通过调用科大讯飞的库，高效地实现了语音识别的功能。其次，与II-B不同的是，工科创III-C对于软硬件整体调试的要求更高，在具体落实时软件部分又可分为手机端和小车端。在最后整体调试的阶段，小组在手机发送指令和小车执行指令这一部分遇到了问题，花费了较多时间才得以检查出错误并解决。在未来的工程应用中，不仅要保证独立模块的正确性和可操作性，更要考虑整体，统一解决。</span></p><h2><a name="附录" class="md-header-anchor"></a><span>附录</span></h2><h3><a name="系统使用说明" class="md-header-anchor"></a><span>系统使用说明</span></h3><ol start='' ><li><span>启动小车电源，启动车载端应用，点击应用左下角的“Bluetooth”按钮，点击小车蓝牙模块对应的设备，将车载端与小车蓝牙模块连接；</span></li><li><span>启动遥控端应用，在文本输入框内输入车载端的 IP 地址（显示在车载端应用的左下角），点击“连接”以建立指令传输的套接字连接；</span></li><li><span>点击车载端应用左下部的“Socket”按钮，输入遥控端的 IP 地址（显示在遥控端应用的上部），点击“确认”以建立图像回传的套接字连接；</span></li><li><span>通过车载端应用左下角的网络状态信息，确认指令传输和图像回传的连接均已正常，将车载端手机装到小车上；</span></li><li><span>在遥控端界面上选择任一控制方式（包括方向键、手势、重力感应、手势、语音五种）对小车进行控制，小车回传图像均会显示在界面上；</span></li><li><span>操作完毕后，关闭小车电源，遥控端和车载端各自关闭应用即可。</span></li></ol><h3><a name="源代码" class="md-header-anchor"></a><span>源代码</span></h3><p><span>源代码见 </span><a href='source'><span>source</span></a><span> 目录，</span><a href='source/car'><span>car</span></a><span> 子目录下放置了小车单片机代码，</span><a href='source/remote'><span>remote</span></a><span> 子目录下放置了遥控端应用代码，</span><a href='source/mounted'><span>mounted</span></a><span> 子目录下放置了小车端应用代码。</span></p><h3><a name="系统电路图" class="md-header-anchor"></a><span>系统电路图</span></h3><p><img src='image/circuit.jpg' alt='' referrerPolicy='no-referrer' /></p><h3><a name="参考资料" class="md-header-anchor"></a><span>参考资料</span></h3><ol start='' ><li><a href='https://eelab.sjtu.edu.cn/kc'><span>工科创 3C 课程资料</span></a></li></ol></div>
+</body>
+</html>
