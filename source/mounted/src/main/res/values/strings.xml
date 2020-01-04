@@ -1,0 +1,17 @@
+<resources>
+<string name="app_name">Mounted</string>
+<string name="msg_client_unconnected">Message Client Unconnected</string>
+<string name="msg_client_connected">Message Client Connected</string>
+<string name="img_server_unconnected">Image Server Unconnected</string>
+<string name="img_server_connected">Image Server Connected</string>
+<string name="bluetooth_unconnected">Bluetooth Unconnected</string>
+<string name="bluetooth_connected">Bluetooth Connected</string>
+<string name="socket_button">Socket</string>
+<string name="bluetooth_button">Bluetooth</string>
+<string name="host_edit_title">Enter host address</string>
+    <string name="processed_image">Processed Image</string>
+    <string name="autodrive_check">Autodrive</string>
+    <string name="ip_address_n_a">IP Address: N/A</string>
+    <string name="n_a">N/A</string>
+    <string name="stop">Stop</string>
+</resources>

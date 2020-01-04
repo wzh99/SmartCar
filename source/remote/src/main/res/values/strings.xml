@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ui</string>
+    <string name="btn_conn">连接</string>
+    <string name="btn_control">方向键控制</string>
+    <string name="btn_gravity">重力感应</string>
+    <string name="btn_stick">手柄控制</string>
+    <string name="title_activity_direction">DirectionActivity</string>
+</resources>

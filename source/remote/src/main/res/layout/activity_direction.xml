@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary">
+
+            <Switch
+                android:id="@+id/video_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="视频回传" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:stretchColumns="*">
+
+            <TableRow android:layout_height="80dp">
+
+                <ImageView
+                    android:id="@+id/left_forwarding"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:gravity="center"></ImageView>
+
+                <ImageView
+                    android:id="@+id/forwarding"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:gravity="center"
+                    android:src="@drawable/forward">
+
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/right_forwarding"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:gravity="center"></ImageView>
+
+            </TableRow>
+
+            <TableRow android:layout_height="10dp">
+
+                <ImageView
+                    android:id="@+id/left"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:gravity="center"
+                    android:src="@drawable/left"></ImageView>
+
+                <ImageView
+                    android:id="@+id/stop"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:gravity="center"></ImageView>
+
+                <ImageView
+                    android:id="@+id/right"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:gravity="center"
+                    android:src="@drawable/right"></ImageView>
+            </TableRow>
+
+            <TableRow android:layout_height="80dp">
+
+                <ImageView
+                    android:id="@+id/left_back"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:gravity="center"></ImageView>
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:gravity="center"
+                    android:src="@drawable/backward"></ImageView>
+
+                <ImageView
+
+                    android:id="@+id/back_right"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:gravity="center"></ImageView>
+
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_height="305dp"
+            android:layout_width="match_parent"
+            android:layout_weight="1">
+
+        <ImageView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/image"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

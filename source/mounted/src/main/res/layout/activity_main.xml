@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    tools:context="com.example.mounted.MainActivity">
+
+    <org.opencv.android.JavaCamera2View
+        android:id="@+id/captured"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/msgNetworkStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:text="@string/msg_client_unconnected"
+        android:textColor="#4CAF50" />
+
+    <TextView
+        android:id="@+id/imgNetworkStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/msgNetworkStatus"
+        android:layout_marginBottom="0dp"
+        android:text="@string/img_server_unconnected"
+        android:textColor="#009688" />
+
+    <Button
+        android:id="@+id/socketButton"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ipAddr"
+        android:layout_marginBottom="0dp"
+        android:fontFamily="sans-serif-condensed"
+        android:onClick="onSocketButtonClick"
+        android:text="@string/socket_button"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/bluetoothButton"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ipAddr"
+        android:layout_marginBottom="0dp"
+        android:layout_toEndOf="@id/socketButton"
+        android:fontFamily="sans-serif-condensed"
+        android:onClick="onBluetoothButtonClick"
+        android:text="@string/bluetooth_button"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/stopButton"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ipAddr"
+        android:layout_marginBottom="0dp"
+        android:layout_toEndOf="@id/bluetoothButton"
+        android:fontFamily="sans-serif-condensed"
+        android:onClick="onStopButtonClick"
+        android:text="@string/stop"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/procView"
+        android:layout_width="256dp"
+        android:layout_height="144dp"
+        android:layout_alignEnd="@+id/captured"
+        android:layout_alignBottom="@+id/captured"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:alpha="0.5"
+        android:contentDescription="@string/processed_image"
+        android:src="@android:color/black" />
+
+    <Switch
+        android:id="@+id/autodriveSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/socketButton"
+        android:layout_marginBottom="0dp"
+        android:checked="false"
+        android:showText="false"
+        android:text="@string/autodrive_check" />
+
+    <TextView
+        android:id="@+id/ipAddr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imgNetworkStatus"
+        android:layout_marginBottom="0dp"
+        android:text="@string/ip_address_n_a" />
+
+    <TextView
+        android:id="@+id/ratioText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/procView"
+        android:layout_alignStart="@+id/procView"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="0dp"
+        android:textColor="#4CAF50"/>
+
+    <TextView
+        android:id="@+id/bluetoothMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bluetoothButton"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toEndOf="@+id/autodriveSwitch"
+        android:text="@string/n_a" />
+
+
+</RelativeLayout>
